@@ -53,6 +53,7 @@ class Square(Rectangle):
         self.width = side
         self.height = side
 
+
 rect = Rectangle(10,3)
 rect.get_area()
 rect.get_diagonal()

@@ -93,10 +93,7 @@ def create_spend_chart(*categories):
             else:
                 zero = " "
                 upper_lines += f" {zero}"
-
-        print(upper_lines)
         set_up_numbers -= 10
-    print(f'--------'.rjust(12, " "))
 
     max_length = 0
     for final_list_index in range(0, len(final_list)):
@@ -112,8 +109,6 @@ def create_spend_chart(*categories):
                 # print(final_list[final_list_index][0][letter_index])
             except:
                 lower_lines += f"".rjust(2, " ")
-        print(lower_lines)
-
     return ""
 
 food = Category("Food")
@@ -130,34 +125,3 @@ business.withdraw(10.99)
 print("\n")
 print(f'{food}\n')
 # print(create_spend_chart([food, entertainment, business]))
-
-
-
-
-
-
-
-
-# food = Category("Food")
-# clothing = Category("Clothing")
-# personal = Category("Personal")
-#
-# personal.deposit(250.69, "Birthday Cash from Grandma")
-# food.transfer(10.35, clothing)
-# food.transfer(0.35, food)
-# personal.withdraw(39.35, "Gas")
-# food.deposit(55.32, "Buffalo Wild Wings")
-# food.transfer(31.40, clothing)
-#
-# print(food)
-# print(clothing)
-# print(personal)
-#
-# categories = [food, clothing, personal]
-# create_spend_chart(categories)
-
-
-
-
-
-
