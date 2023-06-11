@@ -1,0 +1,168 @@
+.dog-app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.dog-api-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dog-api-title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 10px 0 15px 0;
+}
+
+.starting-dogs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.dog-btn {
+  margin: 0 auto;
+}
+
+.starting-image-container,
+.finishing-image-container {
+  background-color: rgb(8, 145, 191);
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.1);
+  width: 125px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+}
+
+.starting-image,
+.finishing-image {
+  min-width: 50%;
+  min-height: 20%;
+  max-height: 90%;
+  pointer-events: none;
+  display: inherit;
+  object-fit: contain;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.show-border {
+  transform: rotate(-15deg);
+}
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finishing-image-container {
+  transform-origin: bottom 10px;
+  transition: all 0.3s linear;
+}
+
+.finishing-image-container + .finishing-image-container {
+  margin-left: -10%;
+}
+
+.finishing-image-container:hover ~ .finishing-image-container {
+  transform: translateX(50px);
+}
+
+.one-card:hover {
+  transform: rotate(360deg);
+}
+
+.two-cards:nth-of-type(1):hover {
+  transform: rotate(-15deg) translateX(-10px);
+}
+.two-cards:nth-of-type(2):hover {
+  transform: rotate(+15deg) translateX(-5px);
+}
+
+.three-cards:nth-of-type(1):hover,
+.four-cards:nth-of-type(1):hover,
+.five-cards:nth-of-type(1):hover,
+.all-cards:nth-of-type(1):hover {
+  transform: rotate(-10deg) translateX(-5px);
+}
+.three-cards:nth-of-type(2):hover {
+  transform: translateY(-10px);
+}
+.three-cards:nth-of-type(3):hover {
+  transform: rotate(+15deg) translateX(-5px);
+}
+
+.four-cards:nth-of-type(2):hover,
+.five-cards:nth-of-type(2):hover,
+.all-cards:nth-of-type(2):hover {
+  transform: rotate(-5deg) translateY(-10px);
+}
+.four-cards:nth-of-type(3):hover {
+  transform: rotate(+5deg) translateY(-10px);
+}
+.four-cards:nth-of-type(4):hover {
+  transform: rotate(+15deg) translateX(+10px);
+}
+
+.five-cards:nth-of-type(3):hover {
+  transform: translateY(-10px);
+}
+.five-cards:nth-of-type(4):hover {
+  transform: rotate(+5deg) translateY(-10px);
+}
+.five-cards:nth-of-type(5):hover {
+  transform: rotate(+15deg) translateX(+10px);
+}
+
+.all-cards:nth-of-type(3):hover {
+  transform: translateY(-10px);
+}
+.all-cards:nth-of-type(4):hover {
+  transform: translateY(-10px);
+}
+.all-cards:nth-of-type(5):hover {
+  transform: rotate(+5deg) translateX(+10px);
+}
+.all-cards:nth-of-type(6):hover {
+  transform: rotate(+10deg) translateX(+10px);
+}
+
+.dog-countdown {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .dog-api-title {
+    font-size: 1.5rem;
+  }
+  .dog-btn {
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+  .dog-countdown {
+    font-size: 1.2rem;
+  }
+  .starting-image-container,
+  .finishing-image-container {
+    box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.1);
+    width: 90px;
+    height: 150px;
+  }
+}
