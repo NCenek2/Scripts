@@ -35,3 +35,8 @@ timer
   can choose a workout time and a rest time. Once the time is ended,
   an alarm will sound, and the rest period will begin. The user can
   pause or reset like a usual timer.
+
+Fruit Store
+  This project was my first attempt to create a ECommerce site with
+  fruit as the items to select from. The user can go through buy fruits
+  and then select their quantities and check the total price at the end.
